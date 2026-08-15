@@ -1,8 +1,8 @@
-package ru.fantomrat.scaffoldingnodown.platform.neoforge;
+package ru.fantomrat.noscaffoldingdown.platform.neoforge;
 
 //? neoforge {
 
-/*import ru.fantomrat.scaffoldingnodown.ModMain;
+/*import ru.fantomrat.noscaffoldingdown.ModMain;
 import net.neoforged.fml.common.Mod;
 
 @Mod(ModMain.MOD_ID)

@@ -1,8 +1,8 @@
-package ru.fantomrat.scaffoldingnodown.platform.fabric;
+package ru.fantomrat.noscaffoldingdown.platform.fabric;
 
 //? fabric {
 
-import ru.fantomrat.scaffoldingnodown.platform.Platform;
+import ru.fantomrat.noscaffoldingdown.platform.Platform;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.nio.file.Path;

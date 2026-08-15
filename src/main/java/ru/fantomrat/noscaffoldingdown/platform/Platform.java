@@ -1,4 +1,4 @@
-package ru.fantomrat.scaffoldingnodown.platform;
+package ru.fantomrat.noscaffoldingdown.platform;
 
 import java.nio.file.Path;
 

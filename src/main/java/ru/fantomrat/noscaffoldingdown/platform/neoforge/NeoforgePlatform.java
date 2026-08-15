@@ -1,9 +1,9 @@
-package ru.fantomrat.scaffoldingnodown.platform.neoforge;
+package ru.fantomrat.noscaffoldingdown.platform.neoforge;
 
 //? neoforge {
 
 /*import net.neoforged.fml.loading.FMLPaths;
-import ru.fantomrat.scaffoldingnodown.platform.Platform;
+import ru.fantomrat.noscaffoldingdown.platform.Platform;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.VersionInfo;

@@ -1,8 +1,8 @@
-package ru.fantomrat.scaffoldingnodown.platform.fabric;
+package ru.fantomrat.noscaffoldingdown.platform.fabric;
 
 //? fabric {
 
-import ru.fantomrat.scaffoldingnodown.ModMain;
+import ru.fantomrat.noscaffoldingdown.ModMain;
 import dev.kikugie.fletching_table.annotation.fabric.Entrypoint;
 import net.fabricmc.api.ClientModInitializer;
 

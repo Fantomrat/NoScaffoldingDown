@@ -1,11 +1,11 @@
 loomx.loom_version="1.16-SNAPSHOT"
 
-mod.id = "scaffoldingnodown"
-mod.name = "Scaffolding No Down"
+mod.id = "noscaffoldingdown"
+mod.name = "No Scaffolding Down"
 mod.group = "ru.fantomrat"
 mod.version = "1.0.0"
 mod.channel_tag = "BETA"
-mod.description = "Allows scaffolding to be climbed only while looking down."
+mod.description = "Allows descending from scaffolding only while looking down."
 mod.authors = ["FantomRat"]
 mod.contributors = []
 mod.inception_year = "2026"

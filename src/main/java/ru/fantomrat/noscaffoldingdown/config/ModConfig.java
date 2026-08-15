@@ -1,4 +1,4 @@
-package ru.fantomrat.scaffoldingnodown.config;
+package ru.fantomrat.noscaffoldingdown.config;
 
 import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.toml.TomlFormat;

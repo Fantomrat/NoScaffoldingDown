@@ -1,9 +1,9 @@
-package ru.fantomrat.scaffoldingnodown.platform.forge;
+package ru.fantomrat.noscaffoldingdown.platform.forge;
 
 //? forge {
 
 /*import net.minecraftforge.fml.common.Mod;
-import ru.fantomrat.scaffoldingnodown.ModMain;
+import ru.fantomrat.noscaffoldingdown.ModMain;
 
 @Mod(ModMain.MOD_ID)
 public class ForgeEntrypoint {

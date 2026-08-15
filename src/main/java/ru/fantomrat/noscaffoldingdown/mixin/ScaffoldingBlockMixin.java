@@ -1,6 +1,6 @@
-package ru.fantomrat.scaffoldingnodown.mixin;
+package ru.fantomrat.noscaffoldingdown.mixin;
 
-import ru.fantomrat.scaffoldingnodown.config.ModConfig;
+import ru.fantomrat.noscaffoldingdown.config.ModConfig;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.ScaffoldingBlock;
 import net.minecraft.world.phys.shapes.CollisionContext;

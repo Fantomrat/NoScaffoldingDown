@@ -1,5 +1,5 @@
 {
-  "package": "ru.fantomrat.scaffoldingnodown.mixin",
+  "package": "ru.fantomrat.noscaffoldingdown.mixin",
   "required": true,
   "minVersion": "0.8",
   "compatibilityLevel": "${java}",
