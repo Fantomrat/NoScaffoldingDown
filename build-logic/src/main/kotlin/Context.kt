@@ -51,7 +51,7 @@ class Context(
 	val issuesUrl: String by lazy { optional("mod.issues_url", "$sourcesUrl/issues") }
 
 	val isSnapshot: Boolean by lazy { !project.envTrue("MOD_IS_RELEASE") }
-	val baseVersion: String by lazy { "$modVersion[$channelTag]" }
+	val baseVersion: String by lazy { "$modVersion-$channelTag" }
 	val snapshotSuffix: String by lazy { if (isSnapshot) "-SNAPSHOT" else "" }
 	val fullVersion: String by lazy { "$baseVersion-($currentMcVersion)+${loader.id}$snapshotSuffix" }
 	val basicVersion: String by lazy { "$baseVersion$snapshotSuffix" }
