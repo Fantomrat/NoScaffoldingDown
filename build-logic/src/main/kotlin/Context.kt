@@ -17,8 +17,12 @@ class Context(
 	private fun optional(key: String, fallback: String = ""): String =
 		runCatching { project.sc.properties.get<String>(key) }.getOrNull()?.takeIf { it.isNotBlank() } ?: fallback
 
-	val currentMcVersion: String by lazy {
+	val currentStonecutterVersion: String by lazy {
 		stonecutter.current.version
+	}
+
+	val currentMinecraftVersion: String by lazy {
+		require("deps.minecraft")
 	}
 
 	val modId: String by lazy { require("mod.id") }
@@ -53,7 +57,7 @@ class Context(
 	val isSnapshot: Boolean by lazy { !project.envTrue("MOD_IS_RELEASE") }
 	val baseVersion: String by lazy { "$modVersion$channelTag" }
 	val snapshotSuffix: String by lazy { if (isSnapshot) "-SNAPSHOT" else "" }
-	val fullVersion: String by lazy { "$baseVersion-($currentMcVersion)+${loader.id}$snapshotSuffix" }
+	val fullVersion: String by lazy { "$baseVersion-($currentStonecutterVersion)+${loader.id}$snapshotSuffix" }
 	val basicVersion: String by lazy { "$baseVersion$snapshotSuffix" }
 
 	val publishAdditionalVersions: List<String> by lazy {
@@ -62,10 +66,10 @@ class Context(
 
 	val javaVersion: JavaVersion by lazy {
 		when {
-			stonecutter.eval(currentMcVersion, ">=26") -> JavaVersion.VERSION_25
-			stonecutter.eval(currentMcVersion, ">=1.20.5") -> JavaVersion.VERSION_21
-			stonecutter.eval(currentMcVersion, ">=1.18") -> JavaVersion.VERSION_17
-			stonecutter.eval(currentMcVersion, ">=1.17") -> JavaVersion.VERSION_16
+			stonecutter.eval(currentMinecraftVersion, ">=26") -> JavaVersion.VERSION_25
+			stonecutter.eval(currentMinecraftVersion, ">=1.20.5") -> JavaVersion.VERSION_21
+			stonecutter.eval(currentMinecraftVersion, ">=1.18") -> JavaVersion.VERSION_17
+			stonecutter.eval(currentMinecraftVersion, ">=1.17") -> JavaVersion.VERSION_16
 			else -> JavaVersion.VERSION_1_8
 		}
 	}

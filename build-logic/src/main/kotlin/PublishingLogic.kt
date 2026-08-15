@@ -82,7 +82,7 @@ fun Project.configureModPublishing(ctx: Context) {
 		modLoaders.add(ctx.loader.id)
 
 		displayName =
-			"${ctx.modName} ${ctx.basicVersion} ${ctx.loader.id.replaceFirstChar(Char::titlecase)} ${ctx.currentMcVersion}"
+			"${ctx.modName} ${ctx.basicVersion} ${ctx.loader.id.replaceFirstChar(Char::titlecase)} ${ctx.currentStonecutterVersion}"
 
 		val deps = ctx.extension.dependencies
 
@@ -104,7 +104,7 @@ private fun ModPublishExtension.modrinth(
 	}
 
 	this.accessToken = accessToken
-	minecraftVersions.addAll(listOf(ctx.currentMcVersion) + additionalVersions)
+	minecraftVersions.addAll(listOf(ctx.currentMinecraftVersion) + additionalVersions)
 
 	if (!staging) {
 		deps.required.forEach { dep -> whenNotNull(dep.modrinth) { requires(it) } }
@@ -122,7 +122,7 @@ private fun ModPublishExtension.curseforge(
 	server = ctx.environment.lowercase() in setOf("server", "both")
 
 	this.accessToken = accessToken
-	minecraftVersions.addAll(listOf(ctx.currentMcVersion) + additionalVersions)
+	minecraftVersions.addAll(listOf(ctx.currentMinecraftVersion) + additionalVersions)
 
 	deps.required.forEach { dep -> whenNotNull(dep.curseforge) { requires(it) } }
 	deps.optional.forEach { dep -> whenNotNull(dep.curseforge) { optional(it) } }
