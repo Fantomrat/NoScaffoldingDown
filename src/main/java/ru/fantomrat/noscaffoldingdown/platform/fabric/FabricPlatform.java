@@ -2,7 +2,7 @@ package ru.fantomrat.noscaffoldingdown.platform.fabric;
 
 //? fabric {
 
-import ru.fantomrat.noscaffoldingdown.platform.Platform;
+/*import ru.fantomrat.noscaffoldingdown.platform.Platform;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.nio.file.Path;
@@ -34,4 +34,4 @@ public class FabricPlatform implements Platform {
 		return FabricLoader.getInstance().getConfigDir();
 	}
 }
-//?}
+*///?}

@@ -2,7 +2,7 @@ package ru.fantomrat.noscaffoldingdown.platform.forge;
 
 //? forge {
 
-/*import ru.fantomrat.noscaffoldingdown.platform.Platform;
+import ru.fantomrat.noscaffoldingdown.platform.Platform;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
 import net.minecraftforge.fml.loading.FMLPaths;
@@ -36,4 +36,4 @@ public class ForgePlatform implements Platform {
 		return FMLPaths.CONFIGDIR.get();
 	}
 }
-*///?}
+//?}

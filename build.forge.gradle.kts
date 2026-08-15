@@ -1,3 +1,6 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+
 plugins {
 	id("mod-platform")
 	id("net.neoforged.moddev.legacyforge")

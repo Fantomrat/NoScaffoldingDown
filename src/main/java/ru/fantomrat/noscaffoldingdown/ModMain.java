@@ -7,19 +7,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 //? fabric {
-import ru.fantomrat.noscaffoldingdown.platform.fabric.FabricPlatform;
-//?} neoforge {
+/*import ru.fantomrat.noscaffoldingdown.platform.fabric.FabricPlatform;
+*///?} neoforge {
 /*import ru.fantomrat.noscaffoldingdown.platform.neoforge.NeoforgePlatform;
  *///?} forge {
-/*import ru.fantomrat.noscaffoldingdown.platform.forge.ForgePlatform;
- *///?}
+import ru.fantomrat.noscaffoldingdown.platform.forge.ForgePlatform;
+ //?}
 
 @SuppressWarnings("LoggingSimilarMessage")
 public class ModMain {
 
 	public static final String MOD_ID = /*$ mod_id*/ "noscaffoldingdown";
 	public static final String MOD_VERSION = /*$ mod_version*/ "1.0.0";
-	public static final String MOD_FRIENDLY_NAME = /*$ mod_name*/ "Scaffolding No Down";
+	public static final String MOD_FRIENDLY_NAME = /*$ mod_name*/ "No Scaffolding Down";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	private static final Platform PLATFORM = createPlatformInstance();
@@ -42,11 +42,11 @@ public class ModMain {
 
 	private static Platform createPlatformInstance() {
 		//? fabric {
-		return new FabricPlatform();
-		//?} neoforge {
+		/*return new FabricPlatform();
+		*///?} neoforge {
 		/*return new NeoforgePlatform();
 		 *///?} forge {
-		/*return new ForgePlatform();
-		 *///?}
+		return new ForgePlatform();
+		 //?}
 	}
 }

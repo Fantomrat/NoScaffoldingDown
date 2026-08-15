@@ -155,9 +155,22 @@ abstract class ModPlatformPlugin @Inject constructor() : Plugin<Project> {
 	private fun Project.configureProcessResources(ctx: Context) {
 		tasks.named<ProcessResources>("processResources") {
 			dependsOn(tasks.named("stonecutterGenerate"), "kspKotlin")
-			filesMatching("*.mixins.json") {
-				expand("java" to "JAVA_${ctx.javaVersion.majorVersion}")
+
+			val javaLevel = "JAVA_${ctx.javaVersion.majorVersion}"
+			val refmapLine = if (ctx.loader is Loader.Forge) {
+				"\"refmap\": \"${prop("mod.id")}.mixins.refmap.json\","
+			} else {
+				""
 			}
+
+			filesMatching("*.mixins.json") {
+				filter { line ->
+					line
+						.replace("\${java}", javaLevel)
+						.replace("\${refmap}", refmapLine)
+				}
+			}
+
 			exclude(ctx.loader.excludedResources)
 		}
 	}
