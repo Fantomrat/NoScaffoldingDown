@@ -72,10 +72,19 @@ jobs:
           sed -i "s|%%%repo_url%%%|${REPO_URL}|g" cliff.toml
 
       - name: Generate changelog with git-cliff
-        uses: orhun/git-cliff-action@v4
-        with:
-          args: --latest --strip header --output CHANGELOG.md
-          version: 'v2.10.1'
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          PREVIOUS_TAG=$(git tag --sort=-version:refname | grep -Fxv "$TAG" | head -n 1)
+
+          if [[ -z "$PREVIOUS_TAG" ]]; then
+            cat > CHANGELOG.md <<'EOF'
+          ## Initial Release
+
+          Initial release.
+          EOF
+          else
+            git cliff --latest --strip header --output CHANGELOG.md
+          fi
 
       - name: Check GitHub releases toggle
         id: check
