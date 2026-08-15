@@ -60,6 +60,16 @@ class Context(
 	val fullVersion: String by lazy { "$baseVersion-($currentStonecutterVersion)+${loader.id}$snapshotSuffix" }
 	val basicVersion: String by lazy { "$baseVersion$snapshotSuffix" }
 
+	val publishVersion: String by lazy {
+		val full = "$modVersion$channelTag-$currentStonecutterVersion-${loader.id}"
+
+		if (full.length > 32) {
+			"$modVersion$channelTag-$currentMinecraftVersion-${loader.id}"
+		} else {
+			full
+		}
+	}
+
 	val publishAdditionalVersions: List<String> by lazy {
 		project.sc.properties.rawOrNull("publish", "additionalVersions")?.to<List<String>>().orEmpty()
 	}
