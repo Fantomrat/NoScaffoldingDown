@@ -22,6 +22,7 @@ platform {
 		required("neoforge") {
 			forgeLikeVersionRange.set("[1,)")
 		}
+		optional("cloth_config") { forgeLikeVersionRange.set("[1,)") }
 	}
 }
 
