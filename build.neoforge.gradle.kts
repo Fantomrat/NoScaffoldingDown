@@ -61,11 +61,14 @@ neoForge {
 repositories {
 	mavenCentral()
 	strictMaven("https://api.modrinth.com/maven", "maven.modrinth") { name = "Modrinth" }
+	strictMaven ("https://maven.shedaniel.me/")
 }
 
 dependencies {
 	// implementation(libs.moulberry.mixinconstraints)
 	// jarJar(libs.moulberry.mixinconstraints)
+
+	compileOnly("me.shedaniel.cloth:cloth-config-neoforge:${prop("deps.cloth-config-api")}")
 }
 
 tasks.named("createMinecraftArtifacts") {

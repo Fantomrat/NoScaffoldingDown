@@ -64,6 +64,7 @@ repositories {
 	mavenCentral()
 	strictMaven("https://maven.terraformersmc.com/", "com.terraformersmc") { name = "TerraformersMC" }
 	strictMaven("https://api.modrinth.com/maven", "maven.modrinth") { name = "Modrinth" }
+	strictMaven ("https://maven.shedaniel.me/")
 }
 
 configurations.all {
@@ -85,10 +86,14 @@ dependencies {
 	// implementation(libs.moulberry.mixinconstraints)
 	// include(libs.moulberry.mixinconstraints)
 	//modImplementation("net.fabricmc.fabric-api:fabric-api:${prop("deps.fabric-api")}")
-	//modLocalRuntime("com.terraformersmc:modmenu:${prop("deps.modmenu")}")
+	modCompileOnly("com.terraformersmc:modmenu:${prop("deps.modmenu")}")
 	implementation("com.electronwill.night-config:core:3.8.4")
 	include("com.electronwill.night-config:core:3.8.4")
 
 	implementation("com.electronwill.night-config:toml:3.8.4")
 	include("com.electronwill.night-config:toml:3.8.4")
+
+	modCompileOnly("me.shedaniel.cloth:cloth-config-fabric:${prop("deps.cloth-config-api")}") {
+		exclude(group = "net.fabricmc.fabric-api")
+	}
 }

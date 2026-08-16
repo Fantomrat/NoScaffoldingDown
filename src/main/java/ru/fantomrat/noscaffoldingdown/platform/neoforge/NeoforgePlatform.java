@@ -2,7 +2,7 @@ package ru.fantomrat.noscaffoldingdown.platform.neoforge;
 
 //? neoforge {
 
-/*import net.neoforged.fml.loading.FMLPaths;
+import net.neoforged.fml.loading.FMLPaths;
 import ru.fantomrat.noscaffoldingdown.platform.Platform;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
@@ -29,7 +29,7 @@ public class NeoforgePlatform implements Platform {
 
 	@Override
 	public boolean isDevelopmentEnvironment() {
-		return !FMLLoader/^? if > 1.21.7 {^/.getCurrent()/^?}^/.isProduction();
+		return !FMLLoader/*? if > 1.21.7 {*//*.getCurrent()*//*?}*/.isProduction();
 	}
 
 	@Override
@@ -37,4 +37,4 @@ public class NeoforgePlatform implements Platform {
 		return FMLPaths.CONFIGDIR.get();
 	}
 }
-*///?}
+//?}

@@ -9,10 +9,10 @@ import org.slf4j.LoggerFactory;
 //? fabric {
 /*import ru.fantomrat.noscaffoldingdown.platform.fabric.FabricPlatform;
 *///?} neoforge {
-/*import ru.fantomrat.noscaffoldingdown.platform.neoforge.NeoforgePlatform;
- *///?} forge {
-import ru.fantomrat.noscaffoldingdown.platform.forge.ForgePlatform;
- //?}
+import ru.fantomrat.noscaffoldingdown.platform.neoforge.NeoforgePlatform;
+ //?} forge {
+/*import ru.fantomrat.noscaffoldingdown.platform.forge.ForgePlatform;
+ *///?}
 
 @SuppressWarnings("LoggingSimilarMessage")
 public class ModMain {
@@ -44,9 +44,9 @@ public class ModMain {
 		//? fabric {
 		/*return new FabricPlatform();
 		*///?} neoforge {
-		/*return new NeoforgePlatform();
-		 *///?} forge {
-		return new ForgePlatform();
-		 //?}
+		return new NeoforgePlatform();
+		 //?} forge {
+		/*return new ForgePlatform();
+		 *///?}
 	}
 }

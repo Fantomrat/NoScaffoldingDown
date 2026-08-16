@@ -1,0 +1,6 @@
+{
+  "noscaffoldingdown.config.title": "ScaffoldingNoDown Settings",
+  "noscaffoldingdown.config.category.general": "General",
+  "noscaffoldingdown.config.look_down_angle": "Minimum Look-Down Angle",
+  "noscaffoldingdown.config.look_down_angle.tooltip": "Minimum X rotation required to descend from scaffolding. 0° = looking straight ahead, 90° = looking straight down."
+}

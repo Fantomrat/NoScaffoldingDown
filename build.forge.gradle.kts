@@ -67,6 +67,7 @@ mixin {
 repositories {
 	mavenCentral()
 	strictMaven("https://api.modrinth.com/maven", "maven.modrinth") { name = "Modrinth" }
+	strictMaven ("https://maven.shedaniel.me/")
 }
 
 dependencies {
@@ -74,6 +75,8 @@ dependencies {
 
 	// implementation(libs.moulberry.mixinconstraints)
 	// jarJar(libs.moulberry.mixinconstraints)
+
+	compileOnly("me.shedaniel.cloth:cloth-config-forge:${prop("deps.cloth-config-api")}")
 }
 
 sourceSets {
